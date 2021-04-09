@@ -1,0 +1,10 @@
+#sidebar {
+    border: 2px solid $primaryRed;
+    padding: 1rem;
+    background-color: #ebebeb;
+    display: inline-block;
+
+    ul#sidebar-menu {
+        list-style-type: none;
+    }
+}

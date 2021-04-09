@@ -10,6 +10,17 @@
 
     <link rel="stylesheet" type="text/css" href="/css/style.css">
 
+    @if( Route::is( "docs.*" ) )
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/default.min.css">
+
+        @push( "footer-scripts" )
+            <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+            <script type="text/javascript">
+                hljs.highlightAll();
+            </script>
+        @endpush
+    @endif
+
 </head>
 
 <body>
