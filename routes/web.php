@@ -13,6 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
+Route::get( "/", function() {
+    return view( "index" );
+});
+
+Route::get( "/docs", function() {
+    return redirect( "/" );
+});
+
+Route::get( "/docs/{doc}", function( $doc ) {
+    return view( "docs.single" );
 });

@@ -11,4 +11,4 @@ inside the `resources` directory.
 
 I have another two terminals open, one permanently running `php artisan serve` and the other for browsing and other commands.
 
-It works really seamlessly but I'm pretty sure this isn't the correct or "Laravel way".
+It works really seamlessly, but I'm pretty sure this isn't the correct or "Laravel way".
