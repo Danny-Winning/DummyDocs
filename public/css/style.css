@@ -12,6 +12,19 @@
   margin: 0 auto;
 }
 
+a {
+  text-decoration: none;
+  color: #eb4d4b;
+}
+
+p {
+  margin: 0.75rem 0;
+}
+
+main .container {
+  padding: 0.75rem 0;
+}
+
 header .container {
   padding: 0.75rem 0;
   border-bottom: 2px solid #eb4d4b;
@@ -20,5 +33,22 @@ header #logo-container h1#logo {
   font-size: 3rem;
   line-height: 3rem;
   text-align: right;
+}
+
+footer {
+  margin-top: 1.5rem;
+}
+footer .container {
+  background-color: #4d4d4d;
+  padding-top: 1.75rem;
+}
+footer div#credits {
+  font-weight: 300;
+  font-size: 0.85rem;
+  text-align: center;
+  color: #fff;
+}
+footer div#credits p {
+  margin: 0;
 }
 

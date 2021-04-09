@@ -21,6 +21,4 @@ Route::get( "/docs", function() {
     return redirect( "/" );
 });
 
-Route::get( "/docs/{doc}", function( $doc ) {
-    return view( "docs.single" );
-});
+Route::get( "/docs/{doc}", "DocController@getDoc" )->name( "docs.*" );

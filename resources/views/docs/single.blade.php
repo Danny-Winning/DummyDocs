@@ -4,6 +4,6 @@
 
 @section( "content" )
 
-    <h1>My Documentation Page</h1>
+    {!! $html !!}
 
 @endsection
