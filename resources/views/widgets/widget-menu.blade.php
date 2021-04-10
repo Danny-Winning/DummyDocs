@@ -1,4 +1,4 @@
-<h3>Widget #1</h3>
+<h3>Footer Widget #1</h3>
 
 <ul>
 

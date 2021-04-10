@@ -113,6 +113,10 @@ footer div#credits p {
 .widget {
   border: 1px solid #fff;
 }
+.widget h3 {
+  margin: 0.5rem 0;
+  color: #fff;
+}
 .widget ul li::marker {
   color: #fff;
   content: "•";
