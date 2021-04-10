@@ -1,7 +1,5 @@
 @extends( "layouts.app" )
 
-@section( "title", "Index" )
-
 @section( "content" )
     <p><strong>DummyDocs</strong> is a dummy documentation site for Laravel. Or a Laravel documentation site for dumbasses. You decide. Basically I'm writing up my Laravel notes, in my own words and displaying them inside a Laravel application, because... why not?</p>
 

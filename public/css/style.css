@@ -98,3 +98,7 @@ footer div#credits p {
   margin: 0;
 }
 
+div#error-page {
+  text-align: center;
+}
+
