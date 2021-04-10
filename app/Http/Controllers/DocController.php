@@ -19,7 +19,10 @@ class DocController extends Controller
         $parsedown = new Parsedown();
         $html = $parsedown->text( file_get_contents( $path ) );
 
-        return view( "docs.single", [ "html" => $html ]);
+        return view( "docs.single", [
+            "html" => $html,
+            "title" => ucfirst( htmlspecialchars( $doc ) )
+        ]);
 
     }
 

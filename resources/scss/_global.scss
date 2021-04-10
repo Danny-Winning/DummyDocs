@@ -18,6 +18,11 @@ a {
 
 p {
     margin: .75rem 0;
+    font-weight: 300;
+
+    code {
+        margin: 0 .1rem;
+    }
 }
 
 main {
@@ -30,6 +35,22 @@ main {
 }
 
 pre, code {
-    font-size: .9rem;
+    font-size: .8rem;
     font-family: dico-code-two, mono, monospace;
+}
+
+code {
+    background-color: #f0f0f0;
+    padding: .1rem .2rem;
+}
+
+blockquote {
+    margin: .75rem 0;
+    border-left: 4px solid $primaryRed;
+    padding: .75rem 1rem .75rem 2rem;
+    background-color: #dcdde1;
+
+    p {
+        font-style: italic;
+    }
 }
