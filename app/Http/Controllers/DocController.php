@@ -18,10 +18,11 @@ class DocController extends Controller
 
         $parsedown = new Parsedown();
         $html = $parsedown->text( file_get_contents( $path ) );
+        $title_array = explode( "-", htmlspecialchars( $doc ) );
 
         return view( "docs.single", [
             "html" => $html,
-            "title" => ucfirst( htmlspecialchars( $doc ) )
+            "title" => ucwords( implode( " ", $title_array ) )
         ]);
 
     }
