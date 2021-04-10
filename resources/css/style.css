@@ -17,6 +17,11 @@ a {
   color: #eb4d4b;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  color: #4d4d4d;
+  margin-top: 1.5rem;
+}
+
 p {
   margin: 0.75rem 0;
   font-weight: 300;

@@ -5,5 +5,5 @@
 
     <p>I am using <a href="https://github.com/erusev/parsedown" target="_blank">Parsedown</a> and <a href="https://highlightjs.org/" target="_blank">Highlight.js</a> to parse my markdown notes and display them in a nice, easy to read format.</p>
 
-    <p>If you've somehow stumbled on this site while learning Laravel, I can only apologise. Please visit the <a href="https://laravel.com/docs/8.x">Laravel Docs</a> or <a href="https://laracasts.com" target="_blank">Laracasts</a> for info on <span style="font-style: italic">how to actually use Laravel properly.</span> I'm just hacking around here.</p>
+    <p>If you've somehow stumbled on this site while learning Laravel, I can only apologise. Please visit the <a href="https://laravel.com/docs/8.x" target="_blank">Laravel Docs</a> or <a href="https://laracasts.com" target="_blank">Laracasts</a> for info on <span style="font-style: italic">how to actually use Laravel properly.</span> I'm just hacking around here.</p>
 @endsection
