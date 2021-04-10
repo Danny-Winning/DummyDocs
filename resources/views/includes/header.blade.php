@@ -8,6 +8,8 @@
 
     <title>{{ $title ?? "Really Simple Laravel Docs" }} | Dummy Docs</title>
 
+    <!-- typekit font for code blocks -->
+    <link rel="stylesheet" href="https://use.typekit.net/hix1sdc.css">
     <link rel="stylesheet" type="text/css" href="/css/style.css">
 
     @if( Route::is( "docs.*" ) )

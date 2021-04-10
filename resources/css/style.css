@@ -28,6 +28,11 @@ main .container {
   grid-gap: 1rem;
 }
 
+pre, code {
+  font-size: 0.9rem;
+  font-family: dico-code-two, mono, monospace;
+}
+
 header .container {
   padding: 0.75rem 0;
   border-bottom: 2px solid #eb4d4b;
@@ -43,9 +48,18 @@ header #logo-container h1#logo {
   padding: 1rem;
   background-color: #ebebeb;
   display: inline-block;
+  width: 100%;
 }
 #sidebar ul#sidebar-menu {
   list-style-type: none;
+  text-align: center;
+}
+#sidebar ul#sidebar-menu li a {
+  font-weight: 600;
+  display: block;
+}
+#sidebar ul#sidebar-menu li a:hover {
+  background-color: #fbfbfb;
 }
 
 footer {

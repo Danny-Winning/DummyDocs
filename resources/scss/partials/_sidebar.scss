@@ -3,8 +3,21 @@
     padding: 1rem;
     background-color: #ebebeb;
     display: inline-block;
+    width: 100%;
 
     ul#sidebar-menu {
         list-style-type: none;
+        text-align: center;
+
+        li {
+            a {
+                font-weight: 600;
+                display: block;
+
+                &:hover {
+                    background-color: #fbfbfb;
+                }
+            }
+        }
     }
 }

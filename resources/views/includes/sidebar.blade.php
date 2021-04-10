@@ -1,10 +1,14 @@
-<div id="sidebar">
+<div id="sidebar-container">
 
-    <ul id="sidebar-menu">
+    <div id="sidebar">
 
-        <li><a href="/docs/installation">Installation</a></li>
-        <li><a href="/docs/routing">Routing</a></li>
+        <ul id="sidebar-menu">
 
-    </ul>
+            <li><a href="/docs/installation">Installation</a></li>
+            <li><a href="/docs/routing">Routing</a></li>
+
+        </ul>
+
+    </div>
 
 </div>
