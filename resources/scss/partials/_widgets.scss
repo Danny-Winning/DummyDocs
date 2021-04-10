@@ -1,0 +1,19 @@
+#widgets {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: .75rem;
+    padding: .5rem;
+}
+
+.widget {
+    border: 1px solid #fff;
+
+    ul {
+        li {
+            &::marker {
+                color: #fff;
+                content: "\2022";
+            }
+        }
+    }
+}

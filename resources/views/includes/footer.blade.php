@@ -6,6 +6,8 @@
 
         <div class="container">
 
+            @include( "includes.widgets" )
+
             <div id="credits">
 
                 <p>Designed and developed by Danny.</p>
