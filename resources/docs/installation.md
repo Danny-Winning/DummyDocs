@@ -19,8 +19,8 @@ the following command to serve the website:
 php artisan serve
 ```
 
-By default, you can view the application at `127.0.0.1:8000`. 
+By default, you can view the application at `127.0.0.1:8000`. To change the port, you can set `SERVER_PORT` in your `.env` file.
 
 On occasions, I have run into a `RuntimeException` with the issue
-`No application encryption key has been specified`. If this happens, `CTRL + C` to stop serving your application and run the command
+`No application encryption key has been specified`. If this happens, `ctrl + c` to stop serving your application and run the command
 `php artisan key:generate` before serving the application again.
