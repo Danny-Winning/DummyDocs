@@ -16,20 +16,22 @@ class DocController extends Controller
         if ( !file_exists( $path ) )
             abort( "404" );
 
-        $title_array = explode( "-", htmlspecialchars( $doc ) );
-
         /**
          * Basic caching. Obviously make it longer than 5 seconds in production.
          */
-        $html = cache()->remember( "docs.{$doc}", 5, function() use ( $path ){
-            var_dump( "file_get_contents" );
-            $parsedown = new Parsedown();
-            return $parsedown->text( file_get_contents( $path ) );
+        $document = cache()->remember( "docs.{$doc}", 5, function() use ( $path, $doc ){
+
+            // Markdown parser.
+            $parser = new Parsedown();
+
+            // Returns: Markdown as HTML, $doc as array split by "-"
+            return [ $parser->text( file_get_contents( $path ) ), explode( "-", htmlspecialchars( $doc ) ) ];
+
         });
 
         return view( "docs.single", [
-            "html" => $html,
-            "title" => ucwords( implode( " ", $title_array ) ),
+            "html" => $document[ 0 ],
+            "title" => ucwords( implode( " ", $document[ 1 ] ) ),
             "page_class" => "doc"
         ]);
 

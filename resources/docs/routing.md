@@ -10,7 +10,7 @@
 > to a controller. Not ideal.
 
 Your web routes are defined in `routes/web.php`. The most basic way to define a route is to pass the `Route::get` method an endpoint
-and a closure:
+and a function to call:
 
 ```
 Route::get( "/", function(){
