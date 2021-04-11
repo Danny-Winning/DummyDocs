@@ -9,7 +9,7 @@
 > Else you will need to either `use App\Http\Controllers` or include that in your route definitions when routing
 > to a controller. Not ideal.
 
-Your web routes are defined in `/routes/web.php`. The most basic way to define a route is to pass the `Route::get` method an endpoint
+Your web routes are defined in `routes/web.php`. The most basic way to define a route is to pass the `Route::get` method an endpoint
 and a closure:
 
 ```
@@ -45,6 +45,26 @@ Route::get( "posts/{post}", function() {
 })->name( "posts.*" );
 ```
 
+We can pass parameters to our routes closure:
+
+```
+Route::get( "posts/{post}", function( $post_id ){
+    $post = file_get_contents()
+});
+```
+
 ### Routing to a Controller
 
+For routes that return something more complex than a simple view, it's recommended to use a controller:
+
+```
+Route::get( "posts/{post}", "PostController@showSinglePost" );
+```
+
+The above looks for the `showSinglePost` method of the `PostController`. Controllers are stored in `app/Http/Controllers` and can be
+created manually, or more conveniently with the console command:
+
+```
+php artisan make:controller ControllerName
+```
 <a href="https://stackoverflow.com/questions/44212318/laravel-blade-advantage-of-slot-component-vs-include" target="_blank">Blade: Slots/Components vs @include</a>

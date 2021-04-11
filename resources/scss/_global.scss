@@ -33,9 +33,12 @@ p {
 main {
     .container {
         padding: .75rem 0;
-        display: grid;
-        grid-template-columns: 4fr 1fr;
-        grid-gap: 1rem;
+
+        &.doc {
+            display: grid;
+            grid-template-columns: 5fr 2fr;
+            grid-gap: 1rem;
+        }
     }
 }
 

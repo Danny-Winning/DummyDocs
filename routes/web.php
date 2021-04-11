@@ -15,10 +15,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get( "/", function() {
     return view( "index" );
-});
+})->name( "home" );
 
 Route::get( "/docs", function() {
     return redirect( "/" );
 });
 
-Route::get( "/docs/{doc}", "DocController@getDoc" )->name( "docs.*" );
+Route::get( "/docs/{doc}", "DocController@getDoc" )->name( "docs.*" )->where( "doc", "[A-z_/-]+");

@@ -46,4 +46,4 @@
 
 <main>
 
-    <div class="container">
+    <div class="container {{ $page_class ?? '' }}">

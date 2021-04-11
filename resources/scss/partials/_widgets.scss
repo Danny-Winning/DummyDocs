@@ -3,21 +3,26 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: .75rem;
     padding: .5rem;
+    margin-bottom: .75rem;
 }
 
 .widget {
-    border: 1px solid #fff;
 
     h3 {
         margin: .5rem 0;
         color: #fff;
+        text-align: center;
     }
     ul {
+        list-style-type: none;
+        text-align: center;
         li {
-            &::marker {
-                color: #fff;
-                content: "\2022";
-            }
         }
+    }
+}
+
+footer {
+    .widget {
+
     }
 }

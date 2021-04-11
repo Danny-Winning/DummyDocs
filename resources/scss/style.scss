@@ -2,6 +2,10 @@
 
 @import "vars", "global", "partials/header", "partials/sidebar", "partials/footer", "partials/widgets";
 
+div#section-bottom {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
 div#error-page {
     text-align: center;
 }

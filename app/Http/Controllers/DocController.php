@@ -22,7 +22,8 @@ class DocController extends Controller
 
         return view( "docs.single", [
             "html" => $html,
-            "title" => ucwords( implode( " ", $title_array ) )
+            "title" => ucwords( implode( " ", $title_array ) ),
+            "page_class" => "doc"
         ]);
 
     }
