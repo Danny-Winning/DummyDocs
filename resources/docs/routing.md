@@ -69,3 +69,7 @@ created manually, or more conveniently with the console command:
 ```
 php artisan make:controller ControllerName
 ```
+
+> ### Reference
+> 
+> - <a href="https://laravel.com/docs/8.x/routing" target="_blank">Routing (Laravel Docs)</a>
