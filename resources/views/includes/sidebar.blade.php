@@ -9,8 +9,7 @@
             <li><a href="/docs/assets">Compiling Assets</a></li>
             <li><a href="/docs/blade">Blade</a></li>
             <li><a href="/docs/caching">Caching</a></li>
-            <li><a href="/docs/database-query-builder">Database: Query Builder</a></li>
-            <li><a href="/docs/database-eloquent">Database: Eloquent</a></li>
+            <li><a href="/docs/database">Database</a></li>
 
         </ul>
 

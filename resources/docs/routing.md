@@ -48,11 +48,17 @@ Route::get( "posts/{post}", function() {
 We can pass the dynamic part of the URI to the function and then pass it to the view:
 
 ```
-Route::get( "posts/{post}", function( $post ){
-    $post = file_get_contents( resource_path( "posts/$post.html" ) );
+Route::get( "posts/{post}", function( $slug ){
+    $post = file_get_contents( resource_path( "posts/$slug.html" ) );
     
     return view( "post", [ "post" => $post ] );
 });
+```
+
+It is possible to place view files into directories for better organisation/readability. Then you can access them with `directory_name.file_name`:
+
+```
+return view( "posts.single", [ "post" => $post ] );
 ```
 
 ## Routing to a Controller
@@ -70,6 +76,36 @@ created manually, or more conveniently with the console command:
 php artisan make:controller ControllerName
 ```
 
+This will create a new Controller, ready to be populated with methods:
+
+```
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+
+class Post extends Controller
+{
+    //
+}
+```
+
+You can apply the same logic inside the controllers method:
+
+```
+public function showSinglePost( $slug ) 
+{
+    
+    $path = resource_path( "posts/$slug.html" );
+    
+    if ( !file_exists( $path )
+        abort( "404" );
+    
+    return view( "posts.single", [
+        "post" => $post
+    ]);
+
+}
+```
 > ### Reference
 > 
 > - <a href="https://laravel.com/docs/8.x/routing" target="_blank">Routing (Laravel Docs)</a>
