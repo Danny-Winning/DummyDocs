@@ -1,4 +1,4 @@
-## Installation/Setup
+# Installation/Setup
 
 To install Laravel, you can use Composer. Run the following command to install the Laravel installer globally:
 
@@ -24,3 +24,7 @@ By default, you can view the application at `127.0.0.1:8000`. To change the port
 On occasions, I have run into a `RuntimeException` with the issue
 `No application encryption key has been specified`. If this happens, `ctrl + c` to stop serving your application and run the command
 `php artisan key:generate` before serving the application again.
+
+> ### Reference
+> 
+> - <a href="https://laravel.com/docs/8.x/installation">Installation (Laravel Docs)</a>

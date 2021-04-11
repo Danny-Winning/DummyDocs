@@ -58,6 +58,13 @@ blockquote {
     padding: .75rem 1rem .75rem 2rem;
     background-color: #dcdde1;
 
+    h1, h2, h3 {
+        margin-top: 0;
+    }
+    ul {
+        margin-top: .25rem;
+        margin-left: 1.75rem;
+    }
     p {
         font-style: italic;
     }

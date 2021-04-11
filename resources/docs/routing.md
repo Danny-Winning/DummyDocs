@@ -1,4 +1,4 @@
-## Routing
+# Routing
 
 > When creating a new project, uncomment **line 29** in `app/Providers/RouteServiceProviders.php`:
 >
@@ -45,17 +45,19 @@ Route::get( "posts/{post}", function() {
 })->name( "posts.*" );
 ```
 
-We can pass parameters to our routes closure:
+We can pass the dynamic part of the URI to the function and then pass it to the view:
 
 ```
-Route::get( "posts/{post}", function( $post_id ){
-    $post = file_get_contents()
+Route::get( "posts/{post}", function( $post ){
+    $post = file_get_contents( resource_path( "posts/$post.html" ) );
+    
+    return view( "post", [ "post" => $post ] );
 });
 ```
 
-### Routing to a Controller
+## Routing to a Controller
 
-For routes that return something more complex than a simple view, it's recommended to use a controller:
+For routes that need to do something more than display a simple view, it's recommended to use a controller:
 
 ```
 Route::get( "posts/{post}", "PostController@showSinglePost" );
@@ -67,4 +69,3 @@ created manually, or more conveniently with the console command:
 ```
 php artisan make:controller ControllerName
 ```
-<a href="https://stackoverflow.com/questions/44212318/laravel-blade-advantage-of-slot-component-vs-include" target="_blank">Blade: Slots/Components vs @include</a>
