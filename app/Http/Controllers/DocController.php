@@ -11,15 +11,12 @@ class DocController extends Controller
     public function getDoc( $doc )
     {
 
-        $path = __DIR__ . "/../../../resources/docs/$doc.md";
-
-        if ( !file_exists( $path ) )
-            abort( "404" );
+        $document = \App\Models\Doc::get( $doc );
 
         /**
          * Basic caching. Obviously make it longer than 5 seconds in production.
          */
-        $document = cache()->remember( "docs.{$doc}", 5, function() use ( $path, $doc ){
+        /*$document = cache()->remember( "docs.{$doc}", 5, function() use ( $path, $doc ){
 
             // Markdown parser.
             $parser = new Parsedown();
@@ -27,7 +24,7 @@ class DocController extends Controller
             // Returns: Markdown as HTML, $doc as array split by "-"
             return [ $parser->text( file_get_contents( $path ) ), explode( "-", htmlspecialchars( $doc ) ) ];
 
-        });
+        });*/
 
         return view( "docs.single", [
             "html" => $document[ 0 ],
