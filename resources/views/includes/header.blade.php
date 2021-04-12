@@ -13,6 +13,7 @@
     <link rel="stylesheet" type="text/css" href="/css/style.css">
 
     @if( Route::is( "docs.*" ) )
+        <!-- include Highlight.js -->
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/default.min.css">
 
         @push( "footer-scripts" )

@@ -10,6 +10,7 @@
             <li><a href="/docs/blade">Blade</a></li>
             <li><a href="/docs/caching">Caching</a></li>
             <li><a href="/docs/database">Database</a></li>
+            <li><a href="/docs/functions-reference">Functions &amp; Quick Reference</a></li>
 
         </ul>
 
