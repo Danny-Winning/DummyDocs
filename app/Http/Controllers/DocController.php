@@ -2,9 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use Parsedown;
-
 class DocController extends Controller
 {
 
@@ -13,22 +10,9 @@ class DocController extends Controller
 
         $document = \App\Models\Doc::get( $doc );
 
-        /**
-         * Basic caching. Obviously make it longer than 5 seconds in production.
-         */
-        /*$document = cache()->remember( "docs.{$doc}", 5, function() use ( $path, $doc ){
-
-            // Markdown parser.
-            $parser = new Parsedown();
-
-            // Returns: Markdown as HTML, $doc as array split by "-"
-            return [ $parser->text( file_get_contents( $path ) ), explode( "-", htmlspecialchars( $doc ) ) ];
-
-        });*/
-
         return view( "docs.single", [
-            "html" => $document[ 0 ],
-            "title" => ucwords( implode( " ", $document[ 1 ] ) ),
+            "html" => $document->body,
+            "title" => $document->title,
             "page_class" => "doc"
         ]);
 
