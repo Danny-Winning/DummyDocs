@@ -1,5 +1,7 @@
 # Functions & Reference
 
+## Paths
+
 | Function        | Description                                           |
 | --------------- | ----------------------------------------------------- |
 | base_path()     | Returns the path to the root of your Laravel project. |
