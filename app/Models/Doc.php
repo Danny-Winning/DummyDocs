@@ -9,10 +9,21 @@ use stdClass;
 class Doc
 {
 
+    protected static string $doc_path;
+
+    protected static function init()
+    {
+
+        self::$doc_path = resource_path( "docs/" );
+
+    }
+
     public static function get( $doc )
     {
 
-        $path = resource_path( "docs/$doc.md" );
+        self::init();
+
+        $path = self::$doc_path . "$doc.md";
 
         if ( !file_exists( $path ) )
             abort( "404" );
@@ -26,10 +37,18 @@ class Doc
             $document = new stdClass();
             $document->body = $parser->text( $markdown->body() );
             $document->title = $markdown->matter( "title" ) ?? ucwords( implode( " ", explode( "-", $doc ) ) );
+            $document->order = $markdown->matter( "order" ) ?? 999;
 
             return $document;
 
         });
+
+    }
+
+    public static function getAll()
+    {
+
+
 
     }
 

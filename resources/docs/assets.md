@@ -1,3 +1,9 @@
+---
+title: Compiling Assets
+order: 3
+---
+
+
 # Compiling Assets
 
 For simple apps, you can store CSS and other assets inside your apps `public` folder. Otherwise, it's recommended to make use of the

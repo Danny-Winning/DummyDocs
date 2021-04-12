@@ -1,3 +1,8 @@
+---
+title: Installation/Project Setup
+order: 1
+---
+
 # Installation/Setup
 
 To install Laravel, you can use Composer. Run the following command to install the Laravel installer globally:
